@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import images from "../assets/images"
 import BtnMenu from "./BtnMenu"
 import CustomLink from "./CustomLink"
@@ -39,12 +39,12 @@ const Header = () => {
 			`}
     >
       <figure className="order-2 md:order-1">
-        <NavLink to="/">
+        <Link to="/">
           <img
             src={images.logo}
             alt="logo del portafolio profesional de Yeferson"
           />
-        </NavLink>
+        </Link>
       </figure>
 
       {/* menu hamburger  */}

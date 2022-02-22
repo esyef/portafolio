@@ -19,7 +19,7 @@ const Home = () => {
             </picture>
           </figure>
 
-          <div className="flex flex-col gap-8 md:absolute md:bottom-1 lg:bottom-6 bg-gradient-to-tr md:from-cyan-900 md:to-emerald-700 md:pt-8 md:w-1/2">
+          <div className="flex flex-col relative gap-8 md:absolute md:bottom-1 lg:bottom-6 bg-gradient-to-tr md:from-cyan-900 md:to-emerald-700 md:pt-8 md:w-1/2">
             <h1 className="font-roboto text-4xl text-light font-bold w-10/12 lg:text-6xl lg:w-full">
               Hola 👋, Soy Yeferson y me gusta construir páginas web.
             </h1>
