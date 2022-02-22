@@ -1,7 +1,6 @@
 {
   "name": "portafolio",
   "version": "0.0.0",
-  "homepage": "https://yeffweb.github.io/portafolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
