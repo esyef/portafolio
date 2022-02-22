@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    border-style: solid;
+    -webkit-text-fill-color: rgb(249 250 251);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  body {
+    background: #0b1120;
+  }
+
+  .tech span:not(:last-child)::after {
+    content: " /";
+  }
+}
