@@ -5,6 +5,10 @@ import MsgEmailSned from "../components/MsgEmailSned"
 import images from "../assets/images"
 import { Outlet } from "react-router-dom"
 
+const SERVICEID = "SECRETKEY"
+const TEMPLATEID = "SECRETKEY"
+const USERID = "SECRETKEY"
+
 const Contact = () => {
   const [isSend, setIsSend] = useState(false)
 
