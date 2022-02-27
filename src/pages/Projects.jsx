@@ -1,4 +1,5 @@
 import React from "react"
+import { Outlet } from "react-router-dom"
 import CallToAction from "../components/CallToAction"
 import Project from "../components/Project"
 import { getProjects } from "../data"
@@ -14,6 +15,8 @@ const Projects = () => {
         ))}
       </article>
       <CallToAction />
+
+      <Outlet />
     </>
   )
 }

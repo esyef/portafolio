@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import emailjs from "@emailjs/browser"
 import MsgEmailSned from "../components/MsgEmailSned"
 import images from "../assets/images"
+import { Outlet } from "react-router-dom"
 
 const Contact = () => {
   const [isSend, setIsSend] = useState(false)
@@ -165,6 +166,8 @@ const Contact = () => {
           </div>
         </div>
       )}
+
+      <Outlet />
     </section>
   )
 }
