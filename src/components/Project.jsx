@@ -1,28 +1,33 @@
 import BtnMenu from "../components/BtnMenu"
 
 const Project = ({ project }) => {
+  console.log(project)
   return (
-    <div className="md:grid md:grid-cols-2 md:gap-10 md:items-center">
-      <figure className="shadow-sm shadow-light mb-8 md:m-0">
+    <div className="md:flex md:items-end md:gap-8 ">
+      <figure>
         <picture>
           <img
-            sizes="(max-width: 1066px) 100vw, 1066px"
+            sizes="(max-width: 1400px) 100vw, 1400px"
             srcSet={`
         ${project.images[200]} 200w,
-        ${project.images[590]} 590w,
-        ${project.images[738]} 738w,
-        ${project.images[864]} 864w,
-        ${project.images[982]} 982w,
-        ${project.images[1066]} 1066w,
+        ${project.images[508]} 508w,
+        ${project.images[855]} 855w,
+        ${project.images[876]} 876w,
+        ${project.images[1008]} 1008w,
+        ${project.images[1131]} 1131w,
+        ${project.images[1263]} 1263w,
+        ${project.images[1400]} 1400w,
+
+
         `}
-            src={project.images[1066]}
+            src={project.images[1400]}
             alt="Proyecto portafolio de Yeferson Olarte Roncancio"
-            className="w-full h-96"
+            className="w-full max-w-xl mx-auto"
           />
         </picture>
       </figure>
 
-      <section>
+      <section className="w-5/6 max-w-5xl border-2">
         <div className="mb-4">
           <h2 className="font-roboto font-bold text-4xl capitalize text-light mb-4">
             {project.name}
