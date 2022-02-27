@@ -5,10 +5,6 @@ import MsgEmailSned from "../components/MsgEmailSned"
 import images from "../assets/images"
 import { Outlet } from "react-router-dom"
 
-const SERVICEID = "SECRETKEY"
-const TEMPLATEID = "SECRETKEY"
-const USERID = "SECRETKEY"
-
 const Contact = () => {
   const [isSend, setIsSend] = useState(false)
 
@@ -21,9 +17,9 @@ const Contact = () => {
 
   // Enviar correo
   const submitEmail = (data) => {
-    const templateId = import.meta.env.VITE_TEMPLATEID || SERVICEID
-    const serviceId = import.meta.env.VITE_SERVICEID || TEMPLATEID
-    const userId = import.meta.env.VITE_USERID || USERID
+    const templateId = import.meta.env.VITE_TEMPLATEID
+    const serviceId = import.meta.env.VITE_SERVICEID
+    const userId = import.meta.env.VITE_USERID
     const params = {
       from_name: data.firstName,
       from_email: data.email,
