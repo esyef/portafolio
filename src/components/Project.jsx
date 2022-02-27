@@ -3,8 +3,8 @@ import BtnMenu from "../components/BtnMenu"
 const Project = ({ project }) => {
   console.log(project)
   return (
-    <div className="md:flex md:items-end md:gap-8 ">
-      <figure>
+    <div className="md:flex md:items-center md:gap-8 ">
+      <figure className="mb-8 md:mb-0">
         <picture>
           <img
             sizes="(max-width: 1400px) 100vw, 1400px"
@@ -17,17 +17,15 @@ const Project = ({ project }) => {
         ${project.images[1131]} 1131w,
         ${project.images[1263]} 1263w,
         ${project.images[1400]} 1400w,
-
-
         `}
             src={project.images[1400]}
             alt="Proyecto portafolio de Yeferson Olarte Roncancio"
-            className="w-full max-w-xl mx-auto"
+            className="w-8/12 md:w-full lg:max-w-2xl mx-auto"
           />
         </picture>
       </figure>
 
-      <section className="w-5/6 max-w-5xl border-2">
+      <section className="w-full md:w-10/12 lg:max-w-2xl">
         <div className="mb-4">
           <h2 className="font-roboto font-bold text-4xl capitalize text-light mb-4">
             {project.name}
