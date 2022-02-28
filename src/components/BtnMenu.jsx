@@ -1,5 +1,3 @@
-import PropTypes from "prop-types"
-
 const BtnMenu = ({ children, ariaType, onClick, ...props }) => {
   return (
     <a aria-expanded={ariaType} {...props} onClick={onClick}>
@@ -9,7 +7,3 @@ const BtnMenu = ({ children, ariaType, onClick, ...props }) => {
 }
 
 export default BtnMenu
-
-BtnMenu.propTypes = {
-  children: PropTypes.element.isRequired,
-}

@@ -16,12 +16,13 @@ const projects = [
 
     images: {
       200: imagesProjects.portfolio.portfolio200,
-      422: imagesProjects.portfolio.portfolio422,
-      590: imagesProjects.portfolio.portfolio590,
-      738: imagesProjects.portfolio.portfolio738,
-      864: imagesProjects.portfolio.portfolio864,
-      982: imagesProjects.portfolio.portfolio982,
-      1066: imagesProjects.portfolio.portfolio1066,
+      508: imagesProjects.portfolio.portfolio508,
+      855: imagesProjects.portfolio.portfolio855,
+      876: imagesProjects.portfolio.portfolio876,
+      1008: imagesProjects.portfolio.portfolio1008,
+      1131: imagesProjects.portfolio.portfolio1131,
+      1263: imagesProjects.portfolio.portfolio1263,
+      1400: imagesProjects.portfolio.portfolio1400,
     },
   },
 ]

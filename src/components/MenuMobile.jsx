@@ -12,7 +12,7 @@ const MenuMobile = ({ setIsOpen, isOpen, useref }) => {
   return (
     <>
       <nav
-        className={`md:hidden fixed top-0 shadow-md shadow-light bottom-0 left-0 right-3/4 w-10/12 bg-primary  items-center   flex
+        className={`md:hidden  z-10 fixed top-0 shadow-md shadow-light bottom-0 left-0 right-3/4 w-10/12 bg-primary  items-center   flex
         ${isOpen ? "flex opacity-95" : "hidden"}`}
         ref={useref}
       >

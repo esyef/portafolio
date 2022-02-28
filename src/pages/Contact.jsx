@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import emailjs from "@emailjs/browser"
 import MsgEmailSned from "../components/MsgEmailSned"
 import images from "../assets/images"
+import { Outlet } from "react-router-dom"
 
 const Contact = () => {
   const [isSend, setIsSend] = useState(false)
@@ -94,7 +95,7 @@ const Contact = () => {
               <div>
                 <input
                   type="text"
-                  className={`focus:outline-none block  w-full  mb-2 bg-slate-600 px-5 py-4 focus:shadow-sm focus:shadow-green-500
+                  className={`focus:outline-none block  w-full  mb-2 bg-slate-600 px-5 py-4 
                 ${
                   errors.firstName &&
                   "border-pink-500 border-2 placeholder:text-pink-500 focus:shadow-none"
@@ -114,11 +115,10 @@ const Contact = () => {
 
               <div>
                 <input
-                  className={`block w-full mb-2 focus:outline-none  bg-slate-600  px-5 py-4  focus:shadow-sm focus:shadow-green-500 
+                  className={`block w-full mb-2 focus:outline-none  bg-slate-600  px-5 py-4 
                 ${
-                  errors.email &&
-                  "border-pink-500 border-2 placeholder:text-pink-500 focus:shadow-none"
-                }placeholder:text-lgplaceholder:text-gray-400text-lgtext-gray-50rounded-md`}
+                  errors.email && "border-pink-500 border-2 focus:shadow-none"
+                }placeholder:text-lg placeholder:text-gray-400 text-lg text-gray-50 rounded-md`}
                   placeholder="Dirección de correo"
                   {...register("email", {
                     required: "El correo electrónico no puede estar vacío",
@@ -138,10 +138,9 @@ const Contact = () => {
 
               <div>
                 <textarea
-                  className={`focus:outline-none  block w-full mb-2 bg-slate-600  px-5 py-4 focus:shadow-sm focus:shadow-green-500
+                  className={`focus:outline-none  block w-full mb-2 bg-slate-600  px-5 py-4 
                  ${
-                   errors.mensaje &&
-                   "border-pink-500 border-2 placeholder:text-pink-500 focus:shadow-none"
+                   errors.mensaje && "border-pink-500 border-2"
                  } placeholder:text-lg  placeholder:text-gray-400 text-lg text-gray-50 rounded-md h-36 resize-none`}
                   placeholder="Deja tu mensaje"
                   {...register("mensaje", {
@@ -165,6 +164,8 @@ const Contact = () => {
           </div>
         </div>
       )}
+
+      <Outlet />
     </section>
   )
 }

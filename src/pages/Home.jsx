@@ -1,42 +1,40 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import images from "../assets/images"
 import CallToAction from "../components/CallToAction"
 
 const Home = () => {
   return (
     <>
-      <section className="mb-24 lg:m-0">
-        <div className="md:relative lg:flex ">
-          <figure>
-            <picture>
-              <img
-                sizes="(max-width: 1400px) 100vw, 1400px"
-                srcSet={`  ${images.hero200} 200w, ${images.hero1400} 1400w `}
-                src={images.hero1400}
-                alt="ilustration development"
-                className="w-96 mx-auto  mb-6 md:w-full lg:text-right lg:w-8/12 lg:mr-0.5"
-              />
-            </picture>
-          </figure>
+      <section className="mb-24 lg:m-0 relative">
+        <figure className="lg:relative lg:left-80  lg:w-9/12 mb-4 lg:mb-0">
+          <picture>
+            <img
+              sizes="(max-width: 1400px) 100vw, 1400px"
+              srcSet={`  ${images.hero200} 200w, ${images.hero1400} 1400w `}
+              src={images.hero1400}
+              alt="ilustration development"
+              className="w-10/12 max-w-4xlxl mx-auto object-cover"
+            />
+          </picture>
+        </figure>
 
-          <div className="flex flex-col gap-8 md:absolute md:bottom-1 lg:bottom-6 bg-gradient-to-tr md:from-cyan-900 md:to-emerald-700 md:pt-8 md:w-1/2">
-            <h1 className="font-roboto text-4xl text-light font-bold w-10/12 lg:text-6xl lg:w-full">
-              Hola 👋, Soy Yeferson y me gusta construir páginas web.
-            </h1>
-            <div>
-              <a
-                href="#sobre-mi"
-                className="
+        <div className="flex flex-col lg:order-1 w-11/12  gap-4 max-w-lg lg:absolute lg:top-1/2 ">
+          <h1 className="font-roboto text-4xl text-light font-bold lg:text-5xl max-w-sm">
+            Hola 👋, Soy Yeferson y me gusta construir páginas web.
+          </h1>
+          <div>
+            <a
+              href="#sobre-mi"
+              className="
                 text-light 
                 text-xs  md:text-2xl uppercase 
                 font-lato tracking-wider 
-                bg-green-600 py-4  
+                bg-green-600 py-3  
                 px-8 inline-block rounded-md"
-              >
-                {" "}
-                sobre mí{" "}
-              </a>
-            </div>
+            >
+              {" "}
+              sobre mí{" "}
+            </a>
           </div>
         </div>
       </section>
@@ -72,15 +70,15 @@ const Home = () => {
             Soy un desarrollador front-end junior que busca un nuevo rol en una
             empresa emocionante. Me gusta escribir HTML semántico, usando
             prácticas modernas de CSS y escribiendo Javascript limpio. Cuando
-            escribo código javascript uso Reactjs Vivo en la ciudad de Bogotá,
+            escribo código javascript uso Reactjs. Vivo en la ciudad de Bogotá,
             Colombia{" "}
             <img
               src={images.flagColombia}
               alt="Icono bandera colombia"
               width="18"
               className="inline"
-            />
-            , estoy cursando la carrera profesional de ingenerpia de sistemas.
+            />{" "}
+            y estoy cursando la carrera profesional de ingeniería de sistemas.
             Me gustaría que vieras mi trabajo.
           </p>
 
@@ -102,6 +100,8 @@ const Home = () => {
       </main>
 
       <CallToAction />
+
+      <Outlet />
     </>
   )
 }
