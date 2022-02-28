@@ -17,7 +17,8 @@ const Contact = () => {
 
   // Enviar correo
   const submitEmail = (data) => {
-    const templateId = import.meta.env.VITE_TEMPLATEID
+    const templateId =
+      import.meta.env.VITE_TEMPLATEID || import.meta.env.PRODUCTION.SERVICEID
     const serviceId = import.meta.env.VITE_SERVICEID
     const userId = import.meta.env.VITE_USERID
     const params = {
